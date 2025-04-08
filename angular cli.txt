@@ -1,0 +1,33 @@
+
+CREATING THE ANGULAR APP ---
+#install the @angular/cli
+1) npm i -g @angular/cli
+
+#check cli version
+2) ng --version
+
+#create an anpp
+3) ng new first-ng-app  # optionally use --dry-run
+
+#create an app with some configuration -- use this✅
+4) ng new first-ng-app --inline-style --inline-template
+
+--- important --
+(*) go to angular.json and inside that we have -  "@schematics/angular:component": - delete the "inlineTemplate": true,
+          "inlineStyle": true, (both of them)
+
+CREATING A COMPONENT ---
+#short form -
+#creates HeaderComponent app/header/(header component)
+1) ng g c header
+#full form -
+ng generate component header 
+
+#OR (in a nested directory)
+2) ng g c component/header
+#creates HeaderComponent inside app/Component/header/(header component)
+#inside the `src/app/components` folder
+
+#creates the HomeComponent - 
+3) ng g c HeaderComponent
+
