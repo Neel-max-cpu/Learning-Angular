@@ -1,1 +1,10 @@
-<p>header works!</p>
+<header class="flex px-2 py-2 bg-[#333] text-white">
+    <nav class="flex space-x-5">
+        <!-- retrived from the header component.ts -->
+        <!-- {{title()}} -->
+        <!-- {{title2}} -->
+        <span class="p-1 border-gray-200 bg-blue-500 rounded-lg hover:cursor-pointer hover:bg-blue-600" routerLink="/">{{title()}}</span>
+        <span class="p-1 border-gray-200 bg-blue-500 rounded-lg hover:cursor-pointer hover:bg-blue-600" routerLink="/todos">Todos</span>
+
+    </nav>
+</header>

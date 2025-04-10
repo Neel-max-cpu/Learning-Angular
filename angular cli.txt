@@ -6,7 +6,7 @@ CREATING THE ANGULAR APP ---
 #check cli version
 2) ng --version
 
-#create an anpp
+#create an app
 3) ng new first-ng-app  # optionally use --dry-run
 
 #create an app with some configuration -- use this✅
@@ -18,16 +18,66 @@ CREATING THE ANGULAR APP ---
 
 CREATING A COMPONENT ---
 #short form -
-#creates HeaderComponent app/header/(header component)
+#creates HeaderComponent src/app/header/(header component)
 1) ng g c header
 #full form -
-ng generate component header 
+ng generate components header 
 
 #OR (in a nested directory)
-2) ng g c component/header
-#creates HeaderComponent inside app/Component/header/(header component)
+2) ng g c components/header
+#creates HeaderComponent inside src/app/components/header/(header component)
 #inside the `src/app/components` folder
 
 #creates the HomeComponent - 
-3) ng g c HeaderComponent
+3) ng g c home
+
+
+(*)To start the development server ---
+npm start
+
+
+USE SIGNALS --
+example -
+export class HomeComponent {
+  homemessage = signal("Hello, world! good day");
+
+EVENT LISTENERS IN ANGULAR -- 
+eg - onclick="handleclick()" then in angular: (click)="handleClick()"
+<input class="bg-gray-100 border-1" type="text" (keyup)="keyUpHandler()">
+ keyUpHandler(){
+    console.log('user typed something in the input');
+  }
+--- if someone typed something
+
+Another way of doing - if want to see which particular key was pressed(can work anywhere)
+<input class="bg-gray-100 border-1" type="text" (keyup)="keyUpHandler($event)">
+keyUpHandler(event: KeyboardEvent){
+    console.log(`user pressed the ${event.key} key`)
+  }
+
+
+ROUTING(INBUILT) 
+app.routes.ts ----
+
+export const routes: Routes = [
+    {
+        path: '',
+        pathMatch: 'full',
+        loadComponent: async ()=>{
+            return import('./home/home.component').then(
+                (module)=>module.HomeComponent
+            );
+        },
+    },
+    {
+        path: 'todos',
+        pathMatch: 'full',
+        loadComponent: async ()=>{
+            return import('./todos/todos.component').then(
+                (m)=>m.TodosComponent
+            );
+        },
+    },
+];
+
 

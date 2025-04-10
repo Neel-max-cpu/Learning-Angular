@@ -5,15 +5,15 @@ import { HeaderComponent } from './component/header/header.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HomeComponent, HeaderComponent],
+  imports: [RouterOutlet,HeaderComponent],
   template: `
   <app-header/>
-  <app-home/>
+  <main class="p-2">
+    <router-outlet/>
+  </main>
   `,
   styles: [`
-    p{
-      background-color: red;
-    }
+    
     `],
 })
 export class AppComponent {

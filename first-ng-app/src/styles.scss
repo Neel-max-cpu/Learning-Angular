@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "tailwindcss";
+html, body{
+    margin: 0;
+    padding: 0;
+}
+/* It matches every single element on the page:
+This means: div, p, h1, span, input, button, etc. Even html and body 
+themselves So this rule applies to everything in your HTML.
+*/
+
+
+*{
+    outline: none;
+}
