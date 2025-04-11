@@ -16,7 +16,7 @@ CREATING THE ANGULAR APP ---
 (*) go to angular.json and inside that we have -  "@schematics/angular:component": - delete the "inlineTemplate": true,
           "inlineStyle": true, (both of them)
 
-CREATING A COMPONENT ---
+// CREATING A COMPONENT --- (ng g c)
 #short form -
 #creates HeaderComponent src/app/header/(header component)
 1) ng g c header
@@ -30,6 +30,13 @@ ng generate components header
 
 #creates the HomeComponent - 
 3) ng g c home
+
+
+// CREATING A SERVICES --- similar to global state managment -- (ng g s)
+ng g service services/todo
+#creates todos.service.ts inside `src/app/service`
+in short form ----
+ng g s services/todo
 
 
 (*)To start the development server ---
@@ -79,5 +86,8 @@ export const routes: Routes = [
         },
     },
 ];
+
+
+
 
 
