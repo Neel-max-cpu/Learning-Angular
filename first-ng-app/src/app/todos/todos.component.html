@@ -1,4 +1,27 @@
+<h3 class="font-extrabold">Todos List </h3>
 
-@for (todo of todoItems(); track todo.id) {
-    <p>{{todo.title}}</p>
+<!-- comming from directives! import ti in todos.component.ts(NgIf) -->
+ <!-- this is old way -->
+<!-- <p *ngIf="!todoItems().length" >Loading...</p> -->
+
+<!-- new way to do  -->
+@if(!todoItems().length){
+    <p>Loading....</p>
 }
+
+<!-- using custom pipes -->
+<form action="" class="space-x-2 flex items-center justify-center">
+    <label class="flex items-center" for="">Filter Todos</label>
+    <input 
+    class="w-40 border-1 pl-1 hover:cursor-pointer border-gray-700 placeholder:text-gray-500"
+    name="searchTerm"
+    [(ngModel)]="searchTerm" 
+    type="text" placeholder="Search Todos"
+    />
+</form>
+
+<ul class="ml-10">
+    @for (todo of todoItems() | filterTodos:searchTerm(); track todo.id) {
+        <app-todo-item (todoToggled)="updateTodoItems($event)" [todo]="todo" />
+    }
+</ul>

@@ -38,9 +38,19 @@ ng g service services/todo
 in short form ----
 ng g s services/todo
 
+// CREATING DIRECTIVES ---Angular Directives allow you to add additional behavior to elements in our Angular applications.
+(example)
+ng g directive directives/highlight-completed-todo
+#creates Directives folder inside app/directives
+
 
 (*)To start the development server ---
 npm start
+
+// CREATE YOUR OWN PIPES ---
+(eg)
+ng g pipe pipes/filter-todos
+#creates pipes folder inside app "app/pipes/
 
 
 USE SIGNALS --
@@ -86,6 +96,13 @@ export const routes: Routes = [
         },
     },
 ];
+
+
+
+// IMPORTANT NOTE ---
+useEffect ➝ ngOnInit or effect()
+props ➝ @Input() or input()
+useState ➝ signal()
 
 
 
