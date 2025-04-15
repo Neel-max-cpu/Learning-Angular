@@ -106,5 +106,10 @@ useState ➝ signal()
 
 
 
+// FAKE BACKEND -- JSON WEBSERVER -
+make db.json in the root folder and then run with this --
+json-server --watch db.json --port 3000
+
+
 
 
