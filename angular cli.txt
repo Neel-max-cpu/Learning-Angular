@@ -113,3 +113,11 @@ json-server --watch db.json --port 3000
 
 
 
+// Some Angular Components --
+1) Angular Materials
+2) Prime ng
+3) Telerik components
+
+// if when installing using npm, versions are different then do --legacy-peer-deps at the last
+
+
