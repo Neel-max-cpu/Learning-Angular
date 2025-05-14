@@ -53,6 +53,10 @@ ng g pipe pipes/filter-todos
 #creates pipes folder inside app "app/pipes/
 
 
+//CAN CREATE GUARD --
+ng g guard/guard-name
+
+
 USE SIGNALS --
 example -
 export class HomeComponent {

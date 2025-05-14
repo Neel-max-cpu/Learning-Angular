@@ -1,0 +1,7 @@
+1) prime ng for component -- charts also there
+2) sweet alert 2 for alerts
+3) ngneat/hot-toast -- inspired by react hot toast
+4) ngx-emoji-picker 
+5) lucid angular (for icons-use standalone) --- npm install lucide-angular
+
+if version not matched --legacy-peer-deps
